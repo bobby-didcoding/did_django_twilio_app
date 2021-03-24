@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+{% endblock %}
+
+
+{% block extend_nav %}
+
+<ul class="sidenav">
+  <li><a class="active" href="javascript:void(0)">Two Step Verification</a></li>
+  <li><a href="{% url 'users:sign-in' %}">Demo Sign In</a></li>
+  <li><a href="{% url 'users:sign-up' %}">Demo Sign Up</a></li>
+</ul>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Django Twilio 2-Step Verification Demo - 2-Step Verification</h3>
+
+<div class="container">
+
+  <form id="twostepform" method="POST" action="/verification/{{uidb64}}/{{token}}/">
+    {% csrf_token %}
+
+    <label for="two_step_code">2-Step Code</label>
+    {{ts_form.two_step_code}}
+
+   <button type="submit">Update Password</button>
+ </form>
+
+ {{ts_form.errors}}
+
+</div>
+
+{% endblock %}
+
+{% block extend_footer %}
+
+
+{% endblock %}
