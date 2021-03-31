@@ -140,7 +140,7 @@ EMAIL_HOST = 'XXX'
 EMAIL_PORT = 'XXX'
 EMAIL_USE_TLS = 'XXX'
 EMAIL_HOST_USER = 'XXX'
-DISPLAY_NAME = "2-step auth demo email"
+DISPLAY_NAME = "2-Step Verification API demo email"
 DONOT_REPLY_EMAIL_PASSWORD = 'XXX'
 CURRENT_SITE = "http://localhost:8000"
 

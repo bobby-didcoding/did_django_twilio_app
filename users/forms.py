@@ -62,12 +62,12 @@ class UserProfileForm(forms.ModelForm):
 	post_code = forms.CharField(max_length=8, required=True, 
 		widget=forms.TextInput(attrs={'placeholder': '*Postal Code..'}))
 	country = forms.CharField(max_length=100, required=True, 
-		widget=forms.Select(choices=COUNTRIES))
+		widget=forms.Select(attrs={"class": "selection"}, choices=COUNTRIES))
 
 
 	class Meta:
 		model = UserProfile
-		fields = ('telephone', 'address', 'town', 'county', 'post_code', )
+		fields = ('telephone', 'address', 'town', 'county', 'post_code', 'country' )
 
 
 

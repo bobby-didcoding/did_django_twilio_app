@@ -69,10 +69,6 @@ def sign_up(request):
 			up.user = user
 			up.save()
 
-			#Need to explicitly save CharField with CHOICES for some reason
-			country = up_form.cleaned_data.get('country')
-			up.country = country
-			up.save()
 
 			# Mark user profile as inactive until verified
 			user.is_active = False
