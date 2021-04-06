@@ -1,5 +1,5 @@
 # did_django_braintree_api
-Django project with a basic user authentication
+Django project that uses Twilio to handle 2-step verification
 
 1) cd to development directory
 2) mkvirtualenv did_django_braintree_api
